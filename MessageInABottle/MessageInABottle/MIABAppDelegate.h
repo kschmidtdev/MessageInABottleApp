@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString *const MIABSessionStateChangedNotification;
+
 @interface MIABAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+- (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI;
 
 @end

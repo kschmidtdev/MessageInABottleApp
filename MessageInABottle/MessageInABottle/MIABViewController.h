@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MIABViewController : UIViewController
+- (IBAction)loginTouched:(id)sender;
 
 @end

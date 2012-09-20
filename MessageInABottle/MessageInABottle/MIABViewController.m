@@ -7,6 +7,7 @@
 //
 
 #import "MIABViewController.h"
+#import "MIABAppDelegate.h"
 
 @interface MIABViewController ()
 
@@ -26,9 +27,23 @@
     // Release any retained subviews of the main view.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    // Check if we have already provided FB credentials, and will trigger
+    // log-in flow if we already have them (will do nothing if we do not)
+    MIABAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
+    [delegate openSessionWithAllowLoginUI:FALSE];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)loginTouched:(id)sender
+{
+    MIABAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
+    
+    [delegate openSessionWithAllowLoginUI:TRUE];
+}
 @end

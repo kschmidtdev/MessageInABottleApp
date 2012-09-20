@@ -15,6 +15,9 @@
 		EA6B8E6E160AF2490057905A /* MIABAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6B8E6D160AF2490057905A /* MIABAppDelegate.m */; };
 		EA6B8E71160AF2490057905A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6B8E6F160AF2490057905A /* MainStoryboard.storyboard */; };
 		EA6B8E74160AF2490057905A /* MIABViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6B8E73160AF2490057905A /* MIABViewController.m */; };
+		EA6B8E7F160BBDCE0057905A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B8E7E160BBDCE0057905A /* FacebookSDK.framework */; };
+		EA6B8E87160BC32C0057905A /* ID-1008244.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA6B8E86160BC32C0057905A /* ID-1008244.jpg */; };
+		EA6B8E89160BC3F50057905A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B8E88160BC3F50057905A /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		EA6B8E70160AF2490057905A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		EA6B8E72160AF2490057905A /* MIABViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIABViewController.h; sourceTree = "<group>"; };
 		EA6B8E73160AF2490057905A /* MIABViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIABViewController.m; sourceTree = "<group>"; };
+		EA6B8E7E160BBDCE0057905A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		EA6B8E86160BC32C0057905A /* ID-1008244.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-1008244.jpg"; sourceTree = "<group>"; };
+		EA6B8E88160BC3F50057905A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6B8E89160BC3F50057905A /* libsqlite3.dylib in Frameworks */,
+				EA6B8E7F160BBDCE0057905A /* FacebookSDK.framework in Frameworks */,
 				EA6B8E5E160AF2490057905A /* UIKit.framework in Frameworks */,
 				EA6B8E60160AF2490057905A /* Foundation.framework in Frameworks */,
 				EA6B8E62160AF2490057905A /* CoreGraphics.framework in Frameworks */,
@@ -50,6 +58,8 @@
 		EA6B8E4E160AF2480057905A = {
 			isa = PBXGroup;
 			children = (
+				EA6B8E88160BC3F50057905A /* libsqlite3.dylib */,
+				EA6B8E7E160BBDCE0057905A /* FacebookSDK.framework */,
 				EA6B8E63160AF2490057905A /* MessageInABottle */,
 				EA6B8E5C160AF2490057905A /* Frameworks */,
 				EA6B8E5A160AF2490057905A /* Products */,
@@ -90,6 +100,7 @@
 		EA6B8E64160AF2490057905A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA6B8E86160BC32C0057905A /* ID-1008244.jpg */,
 				EA6B8E65160AF2490057905A /* MessageInABottle-Info.plist */,
 				EA6B8E66160AF2490057905A /* InfoPlist.strings */,
 				EA6B8E69160AF2490057905A /* main.m */,
@@ -152,6 +163,7 @@
 			files = (
 				EA6B8E68160AF2490057905A /* InfoPlist.strings in Resources */,
 				EA6B8E71160AF2490057905A /* MainStoryboard.storyboard in Resources */,
+				EA6B8E87160BC32C0057905A /* ID-1008244.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +254,10 @@
 		EA6B8E78160AF2490057905A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Documents/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MessageInABottle/MessageInABottle-Prefix.pch";
 				INFOPLIST_FILE = "MessageInABottle/MessageInABottle-Info.plist";
@@ -253,6 +269,10 @@
 		EA6B8E79160AF2490057905A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Documents/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MessageInABottle/MessageInABottle-Prefix.pch";
 				INFOPLIST_FILE = "MessageInABottle/MessageInABottle-Info.plist";
