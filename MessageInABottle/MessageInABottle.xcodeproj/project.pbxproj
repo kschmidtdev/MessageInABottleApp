@@ -18,6 +18,9 @@
 		EA6B8E7F160BBDCE0057905A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B8E7E160BBDCE0057905A /* FacebookSDK.framework */; };
 		EA6B8E87160BC32C0057905A /* ID-1008244.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA6B8E86160BC32C0057905A /* ID-1008244.jpg */; };
 		EA6B8E89160BC3F50057905A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B8E88160BC3F50057905A /* libsqlite3.dylib */; };
+		EA6B8E8C160BC7760057905A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6B8E8B160BC7750057905A /* MainViewController.m */; };
+		EACA5603160BCE5800FD506C /* SendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA5602160BCE5800FD506C /* SendMessageViewController.m */; };
+		EACA5607160BD12D00FD506C /* SendMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA5606160BD12D00FD506C /* SendMessageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,12 @@
 		EA6B8E7E160BBDCE0057905A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		EA6B8E86160BC32C0057905A /* ID-1008244.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-1008244.jpg"; sourceTree = "<group>"; };
 		EA6B8E88160BC3F50057905A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		EA6B8E8A160BC7740057905A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EA6B8E8B160BC7750057905A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		EACA5601160BCE5800FD506C /* SendMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageViewController.h; sourceTree = "<group>"; };
+		EACA5602160BCE5800FD506C /* SendMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageViewController.m; sourceTree = "<group>"; };
+		EACA5605160BD12D00FD506C /* SendMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageView.h; sourceTree = "<group>"; };
+		EACA5606160BD12D00FD506C /* SendMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +99,12 @@
 				EA6B8E6C160AF2490057905A /* MIABAppDelegate.h */,
 				EA6B8E6D160AF2490057905A /* MIABAppDelegate.m */,
 				EA6B8E6F160AF2490057905A /* MainStoryboard.storyboard */,
+				EACA5605160BD12D00FD506C /* SendMessageView.h */,
+				EACA5606160BD12D00FD506C /* SendMessageView.m */,
+				EACA5601160BCE5800FD506C /* SendMessageViewController.h */,
+				EACA5602160BCE5800FD506C /* SendMessageViewController.m */,
+				EA6B8E8A160BC7740057905A /* MainViewController.h */,
+				EA6B8E8B160BC7750057905A /* MainViewController.m */,
 				EA6B8E72160AF2490057905A /* MIABViewController.h */,
 				EA6B8E73160AF2490057905A /* MIABViewController.m */,
 				EA6B8E64160AF2490057905A /* Supporting Files */,
@@ -177,6 +192,9 @@
 				EA6B8E6A160AF2490057905A /* main.m in Sources */,
 				EA6B8E6E160AF2490057905A /* MIABAppDelegate.m in Sources */,
 				EA6B8E74160AF2490057905A /* MIABViewController.m in Sources */,
+				EA6B8E8C160BC7760057905A /* MainViewController.m in Sources */,
+				EACA5603160BCE5800FD506C /* SendMessageViewController.m in Sources */,
+				EACA5607160BD12D00FD506C /* SendMessageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +318,7 @@
 				EA6B8E79160AF2490057905A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

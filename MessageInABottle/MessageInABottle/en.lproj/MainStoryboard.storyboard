@@ -19,9 +19,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kPW-0X-sLI">
-                                <rect key="frame" x="78" y="348" width="164" height="74"/>
+                                <rect key="frame" x="60" y="356" width="200" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="17"/>
                                 <state key="normal" title="Login with Facebook">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,7 +44,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="hnm-MI-t7N" kind="modal" identifier="FBLogin" modalTransitionStyle="partialCurl" id="HyK-ES-Fzd"/>
+                        <segue destination="hnm-MI-t7N" kind="modal" identifier="FBLogin" modalTransitionStyle="crossDissolve" id="HyK-ES-Fzd"/>
                     </connections>
                 </viewController>
             </objects>
@@ -62,7 +62,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="535" y="595"/>
+            <point key="canvasLocation" x="789" y="15"/>
         </scene>
         <!--Main View Controller - Message In A Bottle-->
         <scene sceneID="ogI-vV-8eK">
@@ -73,33 +73,139 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Welcome, Person From Facebook" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" id="zRI-tD-SSn">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontSizeToFit="NO" id="zRI-tD-SSn">
                                 <rect key="frame" x="20" y="26" width="280" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AIy-9S-Yre">
+                                <rect key="frame" x="60" y="123" width="200" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="14"/>
+                                <state key="normal" title="Send a Message In A Bottle">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vPk-XH-U5z" kind="push" id="G48-1c-IJV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YiX-8y-hHz">
+                                <rect key="frame" x="60" y="242" width="200" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="14"/>
+                                <state key="normal" title="Check Messages">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkTouched:" destination="scH-V4-fYW" eventType="touchUpInside" id="kk8-cQ-HmU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Message In A Bottle" id="4uX-16-4iI"/>
+                    <navigationItem key="navigationItem" title="Message In A Bottle" id="4uX-16-4iI">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="1V2-Ct-VVL"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="checkButton" destination="YiX-8y-hHz" id="3qa-gP-cNN"/>
+                        <outlet property="welcomeLbl" destination="zRI-tD-SSn" id="Bpx-fN-pUz"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="923" y="595"/>
+            <point key="canvasLocation" x="1177" y="15"/>
+        </scene>
+        <!--Send Message View Controller - Send a Bottle-->
+        <scene sceneID="pGQ-g4-I9Q">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FzI-eb-QMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="vPk-XH-U5z" customClass="SendMessageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cgm-vI-NnX" customClass="SendMessageView">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your awesome message" id="l8x-q6-00G">
+                                <rect key="frame" x="23" y="38" width="275" height="205"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vPk-XH-U5z" id="hUl-fX-ZS8"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qix-we-0tq">
+                                <rect key="frame" x="166" y="251" width="132" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="17"/>
+                                <state key="normal" title="Add Photo 📷">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPhotoTouched:" destination="vPk-XH-U5z" eventType="touchUpInside" id="A5m-VS-4al"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="qyM-Ld-ntV">
+                                <rect key="frame" x="60" y="305" width="200" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="17"/>
+                                <state key="normal" title="Give it a mighty throw and cast it into the sea!">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendTouched:" destination="vPk-XH-U5z" eventType="touchUpInside" id="gyg-vT-D3B"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Your Message:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ios-9G-WS4">
+                                <rect key="frame" x="23" y="20" width="229" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="YFd-1Z-mVx">
+                                <rect key="frame" x="104" y="251" width="54" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="messageTextView" destination="l8x-q6-00G" id="ND6-Rg-m48"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Send a Bottle" id="MPN-hU-5ck"/>
+                    <connections>
+                        <outlet property="imagePreview" destination="YFd-1Z-mVx" id="Ue0-Wg-VcF"/>
+                        <outlet property="messageTextView" destination="l8x-q6-00G" id="AHy-3h-9vs"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1558" y="15"/>
         </scene>
     </scenes>
     <resources>
         <image name="ID-1008244.jpg" width="400" height="254"/>
     </resources>
-    <classes>
-        <class className="MIABViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MIABViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loginTouched:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
