@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA6B8E5E160AF2490057905A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B8E5D160AF2490057905A /* UIKit.framework */; };
+		EA6B8E60160AF2490057905A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B8E5F160AF2490057905A /* Foundation.framework */; };
+		EA6B8E62160AF2490057905A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6B8E61160AF2490057905A /* CoreGraphics.framework */; };
+		EA6B8E68160AF2490057905A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA6B8E66160AF2490057905A /* InfoPlist.strings */; };
+		EA6B8E6A160AF2490057905A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6B8E69160AF2490057905A /* main.m */; };
+		EA6B8E6E160AF2490057905A /* MIABAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6B8E6D160AF2490057905A /* MIABAppDelegate.m */; };
+		EA6B8E71160AF2490057905A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6B8E6F160AF2490057905A /* MainStoryboard.storyboard */; };
+		EA6B8E74160AF2490057905A /* MIABViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6B8E73160AF2490057905A /* MIABViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EA6B8E59160AF2490057905A /* MessageInABottle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageInABottle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA6B8E5D160AF2490057905A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA6B8E5F160AF2490057905A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA6B8E61160AF2490057905A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA6B8E65160AF2490057905A /* MessageInABottle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MessageInABottle-Info.plist"; sourceTree = "<group>"; };
+		EA6B8E67160AF2490057905A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA6B8E69160AF2490057905A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA6B8E6B160AF2490057905A /* MessageInABottle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MessageInABottle-Prefix.pch"; sourceTree = "<group>"; };
+		EA6B8E6C160AF2490057905A /* MIABAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIABAppDelegate.h; sourceTree = "<group>"; };
+		EA6B8E6D160AF2490057905A /* MIABAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIABAppDelegate.m; sourceTree = "<group>"; };
+		EA6B8E70160AF2490057905A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		EA6B8E72160AF2490057905A /* MIABViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIABViewController.h; sourceTree = "<group>"; };
+		EA6B8E73160AF2490057905A /* MIABViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIABViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA6B8E56160AF2490057905A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6B8E5E160AF2490057905A /* UIKit.framework in Frameworks */,
+				EA6B8E60160AF2490057905A /* Foundation.framework in Frameworks */,
+				EA6B8E62160AF2490057905A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA6B8E4E160AF2480057905A = {
+			isa = PBXGroup;
+			children = (
+				EA6B8E63160AF2490057905A /* MessageInABottle */,
+				EA6B8E5C160AF2490057905A /* Frameworks */,
+				EA6B8E5A160AF2490057905A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA6B8E5A160AF2490057905A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA6B8E59160AF2490057905A /* MessageInABottle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA6B8E5C160AF2490057905A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA6B8E5D160AF2490057905A /* UIKit.framework */,
+				EA6B8E5F160AF2490057905A /* Foundation.framework */,
+				EA6B8E61160AF2490057905A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA6B8E63160AF2490057905A /* MessageInABottle */ = {
+			isa = PBXGroup;
+			children = (
+				EA6B8E6C160AF2490057905A /* MIABAppDelegate.h */,
+				EA6B8E6D160AF2490057905A /* MIABAppDelegate.m */,
+				EA6B8E6F160AF2490057905A /* MainStoryboard.storyboard */,
+				EA6B8E72160AF2490057905A /* MIABViewController.h */,
+				EA6B8E73160AF2490057905A /* MIABViewController.m */,
+				EA6B8E64160AF2490057905A /* Supporting Files */,
+			);
+			path = MessageInABottle;
+			sourceTree = "<group>";
+		};
+		EA6B8E64160AF2490057905A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA6B8E65160AF2490057905A /* MessageInABottle-Info.plist */,
+				EA6B8E66160AF2490057905A /* InfoPlist.strings */,
+				EA6B8E69160AF2490057905A /* main.m */,
+				EA6B8E6B160AF2490057905A /* MessageInABottle-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA6B8E58160AF2490057905A /* MessageInABottle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA6B8E77160AF2490057905A /* Build configuration list for PBXNativeTarget "MessageInABottle" */;
+			buildPhases = (
+				EA6B8E55160AF2490057905A /* Sources */,
+				EA6B8E56160AF2490057905A /* Frameworks */,
+				EA6B8E57160AF2490057905A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessageInABottle;
+			productName = MessageInABottle;
+			productReference = EA6B8E59160AF2490057905A /* MessageInABottle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA6B8E50160AF2480057905A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MIAB;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Adrian Crook & Associates";
+			};
+			buildConfigurationList = EA6B8E53160AF2480057905A /* Build configuration list for PBXProject "MessageInABottle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EA6B8E4E160AF2480057905A;
+			productRefGroup = EA6B8E5A160AF2490057905A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA6B8E58160AF2490057905A /* MessageInABottle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA6B8E57160AF2490057905A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6B8E68160AF2490057905A /* InfoPlist.strings in Resources */,
+				EA6B8E71160AF2490057905A /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA6B8E55160AF2490057905A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6B8E6A160AF2490057905A /* main.m in Sources */,
+				EA6B8E6E160AF2490057905A /* MIABAppDelegate.m in Sources */,
+				EA6B8E74160AF2490057905A /* MIABViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA6B8E66160AF2490057905A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA6B8E67160AF2490057905A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA6B8E6F160AF2490057905A /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA6B8E70160AF2490057905A /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA6B8E75160AF2490057905A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA6B8E76160AF2490057905A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA6B8E78160AF2490057905A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MessageInABottle/MessageInABottle-Prefix.pch";
+				INFOPLIST_FILE = "MessageInABottle/MessageInABottle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EA6B8E79160AF2490057905A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MessageInABottle/MessageInABottle-Prefix.pch";
+				INFOPLIST_FILE = "MessageInABottle/MessageInABottle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA6B8E53160AF2480057905A /* Build configuration list for PBXProject "MessageInABottle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA6B8E75160AF2490057905A /* Debug */,
+				EA6B8E76160AF2490057905A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA6B8E77160AF2490057905A /* Build configuration list for PBXNativeTarget "MessageInABottle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA6B8E78160AF2490057905A /* Debug */,
+				EA6B8E79160AF2490057905A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA6B8E50160AF2480057905A /* Project object */;
+}
