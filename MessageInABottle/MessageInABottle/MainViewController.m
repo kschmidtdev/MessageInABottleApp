@@ -43,6 +43,8 @@
 //                 self.userProfileImage.profileID = [user objectForKey:@"id"];
              }
          }];
+        
+        [self refreshTouched:nil];
     }
 
     [self.checkButton setEnabled:FALSE];
@@ -61,6 +63,44 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)checkTouched:(id)sender {
+- (IBAction)checkTouched:(id)sender
+{
+    
 }
+
+- (IBAction)logoutTouched:(id)sender
+{
+    [FBSession.activeSession closeAndClearTokenInformation];
+}
+
+- (IBAction)refreshTouched:(id)sender
+{
+    if (FBSession.activeSession.isOpen)
+    {
+        [[FBRequest requestForGraphPath:@"me/apprequests"] startWithCompletionHandler:
+         ^(FBRequestConnection* connection, id result, NSError* error )
+         {
+             if( !error )
+             {
+                 //NSLog(@"%@", result );
+                 NSArray* requests = [result objectForKey:@"data"];
+                 /*if( requests != nil )
+                 {
+                     NSLog(@"Requests: %@", requests);
+                 }*/
+
+                 if( [requests count] > 0 )
+                 {
+                     NSDictionary* applicationInfo = [[requests objectAtIndex:0] objectForKey:@"application"];
+                     
+                     if( [[applicationInfo objectForKey:@"id"] isEqualToString: @"283702078409452"] )
+                     {
+                         [self.checkButton setEnabled:TRUE];
+                     }
+                 }
+             }
+         }];
+    }
+}
+
 @end

@@ -13,4 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *welcomeLbl;
 @property (strong, nonatomic) IBOutlet UIButton *checkButton;
 - (IBAction)checkTouched:(id)sender;
+- (IBAction)logoutTouched:(id)sender;
+
+- (IBAction)refreshTouched:(id)sender;
 @end

@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class Facebook;
+
 extern NSString *const MIABSessionStateChangedNotification;
 
 @interface MIABAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) Facebook *facebook;
 
 - (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI;
 

@@ -8,6 +8,7 @@
 
 #import "SendMessageViewController.h"
 #import "MIABProtocols.h"
+#import "MIABAppDelegate.h"
 
 @interface SendMessageViewController ()
 
@@ -158,8 +159,6 @@ static NSString* k_AppID = @"283702078409452";
     @"worldhackbottleapp:messages=%@&"
     @"body=%@";
     
-    static NSString* athlete = @"227877630672470";
-    
     result.url = [NSString stringWithFormat:format,
                   k_ServerURL, k_AppID, @"worldhackbottleapp:bottle", @"Bottle", @"Bottle Description",
                   @"https://s-static.ak.fbcdn.net/images/devsite/attachment_blank.png", message, @"Bottle"];
@@ -202,20 +201,22 @@ static NSString* k_AppID = @"283702078409452";
                                          alertText = [NSString stringWithFormat:@"Posted Open Graph action, id: %@",
                                                       [result objectForKey:@"id"]];
                                          
+                                         NSLog(@"%@", alertText);
                                          // start over
                                          [self.navigationController popViewControllerAnimated:TRUE];
+                                         [self displayFacebookInviteRequest];
                                      }
                                      else
                                      {
                                          alertText = [NSString stringWithFormat:@"error: domain = %@, code = %d",
                                                       error.domain, error.code];
+                                         [[[UIAlertView alloc] initWithTitle:@"Result"
+                                                                     message:alertText
+                                                                    delegate:nil
+                                                           cancelButtonTitle:@"Thanks!"
+                                                           otherButtonTitles:nil]
+                                          show];
                                      }
-                                     [[[UIAlertView alloc] initWithTitle:@"Result"
-                                                                 message:alertText
-                                                                delegate:nil
-                                                       cancelButtonTitle:@"Thanks!"
-                                                       otherButtonTitles:nil]
-                                      show];
                                  }];
 }
 
@@ -252,6 +253,80 @@ static NSString* k_AppID = @"283702078409452";
      ];
     
     [connection start];
+}
+
+- (void)displayFacebookInviteRequest
+{
+    // Filter and only show friends using iOS
+    [self requestFriendsUsingDevice:@"iOS"];
+}
+
+- (void)sendRequest:(NSArray *)targeted
+{
+    NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                   @"A bottle has washed ashore!", @"message",
+                                   nil];
+    
+    // Filter and only show targeted friends
+    if (targeted != nil && [targeted count] > 0)
+    {
+        NSString *selectIDsStr = [targeted componentsJoinedByString:@","];
+        [params setObject:selectIDsStr forKey:@"suggestions"];
+    }
+    
+    MIABAppDelegate* delegate = [[UIApplication sharedApplication] delegate];
+
+    [delegate.facebook dialog:@"apprequests" andParams:params andDelegate:nil];
+}
+
+- (void) requestFriendsUsingDevice:(NSString *)device
+{
+    NSMutableArray *deviceFilteredFriends = [[NSMutableArray alloc] init];
+    [FBRequestConnection startWithGraphPath:@"me/friends"
+                                 parameters:[NSDictionary
+                                             dictionaryWithObjectsAndKeys:
+                                             @"id,devices", @"fields",
+                                             nil]
+                                 HTTPMethod:nil
+                          completionHandler:^(FBRequestConnection *connection,
+                                              id result,
+                                              NSError *error)
+    {
+          if (!error)
+          {
+              // Get the result
+              NSArray *resultData = [result objectForKey:@"data"];
+              // Check we have data
+              if ([resultData count] > 0)
+              {
+                  // Loop through the friends returned
+                  for (NSDictionary *friendObject in resultData)
+                  {
+                      // Check if devices info available
+                      if ([friendObject objectForKey:@"devices"])
+                      {
+                          NSArray *deviceData = [friendObject
+                                                 objectForKey:@"devices"];
+                          // Loop through list of devices
+                          for (NSDictionary *deviceObject in deviceData)
+                          {
+                              // Check if there is a device match
+                              if ([device isEqualToString:
+                                   [deviceObject objectForKey:@"os"]])
+                              {
+                                  // If there is a match, add it to the list
+                                  [deviceFilteredFriends addObject:
+                                   [friendObject objectForKey:@"id"]];
+                                  break;
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+          // Send request
+          [self sendRequest:deviceFilteredFriends];
+      }];
 }
 
 @end

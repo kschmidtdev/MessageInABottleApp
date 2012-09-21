@@ -7,11 +7,13 @@
 //
 
 #import "MIABAppDelegate.h"
-#import <FacebookSDK/FacebookSDK.h>
+#import "Facebook.h"
 
 NSString *const MIABSessionStateChangedNotification = @"com.facebook.worldhackbottleapp:MIABSessionStateChangedNotification";
 
 @implementation MIABAppDelegate
+
+@synthesize facebook = _facebook;
 
 - (void)sessionStateChanged:(FBSession *)session
                       state:(FBSessionState)state
@@ -26,6 +28,16 @@ NSString *const MIABSessionStateChangedNotification = @"com.facebook.worldhackbo
         case FBSessionStateOpen:
         {
             NSLog( @"User has logged in, sending them to the main screen." );
+            
+            // Initiate a Facebook instance
+            self.facebook = [[Facebook alloc]
+                             initWithAppId:FBSession.activeSession.appID
+                             andDelegate:nil];
+            
+            // Store the Facebook session information
+            self.facebook.accessToken = FBSession.activeSession.accessToken;
+            self.facebook.expirationDate = FBSession.activeSession.expirationDate;
+
             [self.window.rootViewController performSegueWithIdentifier:@"FBLogin" sender:self.window.rootViewController];
         }
         break;
@@ -37,7 +49,10 @@ NSString *const MIABSessionStateChangedNotification = @"com.facebook.worldhackbo
             
             [self.window.rootViewController dismissModalViewControllerAnimated:TRUE];
 
-            [FBSession.activeSession closeAndClearTokenInformation];            
+            [FBSession.activeSession closeAndClearTokenInformation];
+
+            // Clear out the Facebook instance
+            self.facebook = nil;
         }
         break;
             

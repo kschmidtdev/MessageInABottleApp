@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <FacebookSDK/FacebookSDK.h>
+#import "Facebook.h"
 
 @protocol MIABOGBottle<FBGraphObject>
 
