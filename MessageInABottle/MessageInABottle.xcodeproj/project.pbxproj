@@ -46,6 +46,7 @@
 		EACA5602160BCE5800FD506C /* SendMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageViewController.m; sourceTree = "<group>"; };
 		EACA5605160BD12D00FD506C /* SendMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessageView.h; sourceTree = "<group>"; };
 		EACA5606160BD12D00FD506C /* SendMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendMessageView.m; sourceTree = "<group>"; };
+		EACA5608160BDE9A00FD506C /* MIABProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIABProtocols.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,7 @@
 				EACA5606160BD12D00FD506C /* SendMessageView.m */,
 				EACA5601160BCE5800FD506C /* SendMessageViewController.h */,
 				EACA5602160BCE5800FD506C /* SendMessageViewController.m */,
+				EACA5608160BDE9A00FD506C /* MIABProtocols.h */,
 				EA6B8E8A160BC7740057905A /* MainViewController.h */,
 				EA6B8E8B160BC7750057905A /* MainViewController.m */,
 				EA6B8E72160AF2490057905A /* MIABViewController.h */,
