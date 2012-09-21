@@ -21,6 +21,7 @@
 		EA6B8E8C160BC7760057905A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6B8E8B160BC7750057905A /* MainViewController.m */; };
 		EACA5603160BCE5800FD506C /* SendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA5602160BCE5800FD506C /* SendMessageViewController.m */; };
 		EACA5607160BD12D00FD506C /* SendMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA5606160BD12D00FD506C /* SendMessageView.m */; };
+		EACA562D160C086500FD506C /* AnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA562C160C086300FD506C /* AnswerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,8 @@
 		EACA5628160BF3B200FD506C /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
 		EACA5629160BF3B200FD506C /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
 		EACA562A160BF3B200FD506C /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		EACA562B160C086200FD506C /* AnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerViewController.h; sourceTree = "<group>"; };
+		EACA562C160C086300FD506C /* AnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 				EA6B8E6C160AF2490057905A /* MIABAppDelegate.h */,
 				EA6B8E6D160AF2490057905A /* MIABAppDelegate.m */,
 				EA6B8E6F160AF2490057905A /* MainStoryboard.storyboard */,
+				EACA562B160C086200FD506C /* AnswerViewController.h */,
+				EACA562C160C086300FD506C /* AnswerViewController.m */,
 				EACA5605160BD12D00FD506C /* SendMessageView.h */,
 				EACA5606160BD12D00FD506C /* SendMessageView.m */,
 				EACA5601160BCE5800FD506C /* SendMessageViewController.h */,
@@ -272,6 +277,7 @@
 				EA6B8E8C160BC7760057905A /* MainViewController.m in Sources */,
 				EACA5603160BCE5800FD506C /* SendMessageViewController.m in Sources */,
 				EACA5607160BD12D00FD506C /* SendMessageView.m in Sources */,
+				EACA562D160C086500FD506C /* AnswerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

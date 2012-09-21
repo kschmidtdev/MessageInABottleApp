@@ -89,6 +89,7 @@
                      NSLog(@"Requests: %@", requests);
                  }*/
 
+                 [self.checkButton setEnabled:FALSE];
                  if( [requests count] > 0 )
                  {
                      NSDictionary* applicationInfo = [[requests objectAtIndex:0] objectForKey:@"application"];
